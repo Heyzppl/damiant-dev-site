@@ -1,0 +1,24 @@
+.App {
+    min-height: 100vh;
+    background-color: var(--blue-theme-background-color);
+    color: var(--blue-theme-sub-text-color);
+    position: relative;
+    overflow-y: auto;
+
+    &__main-page-content {
+        min-height: calc(100vh - 80px);
+        padding-top: 80px;
+        position: relative;
+        z-index: 2;
+        overflow-y: auto;
+    }
+
+    #tsparticles {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+}

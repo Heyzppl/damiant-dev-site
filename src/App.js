@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { tsParticles } from "https://cdn.jsdelivr.net/npm/@tsparticles/engine@3.1.0/+esm";
 import { loadAll } from "https://cdn.jsdelivr.net/npm/@tsparticles/all@3.1.0/+esm";
@@ -42,14 +42,19 @@ function App() {
 
       {/* Main Page Content */}
 
-      <Routes>
-        <Route index path='/' element={<Home />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/contact' element={<Contact />} />
-        <Route path='/portfolio' element={<Portfolio />} />
-        <Route path='/resume' element={<Resume />} />
-        <Route path='/skills' element={<Skills />} />
-      </Routes>
+      <div className='App__main-page-content'>
+        <Routes>
+          <Route index path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/portfolio' element={<Portfolio />} />
+          <Route path='/resume' element={<Resume />} />
+          <Route path='/skills' element={<Skills />} />
+        </Routes>
+      </div>
+      
+
+
     </div>
   );
 }

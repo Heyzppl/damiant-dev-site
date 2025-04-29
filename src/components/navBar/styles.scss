@@ -1,18 +1,24 @@
 .navbar{
-    background-color: var(--black-theme-nav-background-color);
+    background-color: rgba(24, 24, 24, 0.8);
+    backdrop-filter: blur(10px);
     height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 999;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
 
     &__container{
         display: flex;
         align-items: center;
         width: 100%;
+        max-width: 1200px;
         height: inherit;
         padding: 0px 20px;
         flex: 1;
@@ -20,36 +26,50 @@
         &__logo{
             color: var(--blue-theme-main-color);
             cursor: pointer;
+            transition: transform 0.3s ease;
+
+            &:hover{
+                transform: scale(1.1);
+            }
         }
 
         &_menu{
             display: flex;
             list-style: none;
             text-align: center;
+            margin-left: auto;
 
             &__item{
                 line-height: 40px;
-                margin-right: 1.5rem;
+                margin-right: 2rem;
                 font-size: 1.6rem;
+                position: relative;
 
                 &::after{
                     content: '';
-                    display: block;
-                    height: 3px;
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
                     width: 0;
-                    background: transparent;
-                    transition: all 0.5s ease;
+                    height: 2px;
+                    background: var(--blue-theme-main-color);
+                    transition: all 0.3s ease;
+                    transform: translateX(-50%);
                 }
 
                 &:hover::after{
                     width: 100%;
-                    background-color: var(--blue-theme-main-color);
                 }
 
                 &__links{
-                    color: var(--blue-theme-main-color);
+                    color: whitesmoke;
                     text-decoration: none;
                     padding: 0.5rem;
+                    transition: color 0.3s ease;
+
+                    &:hover{
+                        color: var(--blue-theme-main-color);
+                    }
                 }
             }
         }
@@ -58,6 +78,12 @@
 
 .nav-icon{
     display: none;
+    color: whitesmoke;
+    transition: color 0.3s ease;
+
+    &:hover{
+        color: var(--blue-theme-main-color);
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -69,26 +95,30 @@
         position: absolute;
         top: 80px;
         left: -110%;
-        opacity: 1;
+        opacity: 0;
         transition: all 0.5s ease;
+        background-color: rgba(24, 24, 24, 0.95);
+        backdrop-filter: blur(10px);
 
         &.active{
-            background: #181818;
-            left: 0px;
+            left: 0;
             opacity: 1;
         }
 
         &__item{
-            border-bottom: 1px solid #282828;
-            margin: 0px;
-            padding: 20px 0px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            margin: 0;
+            padding: 20px 0;
+
+            &::after{
+                display: none;
+            }
         }
     }
 
     .nav-icon{
         display: block;
         cursor: pointer;
-        color: var(--blue-theme-main-color);
         padding-right: 20px;
     }
 }

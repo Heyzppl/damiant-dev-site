@@ -1,0 +1,279 @@
+.resume {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    &__content {
+        padding: 20px;
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+        min-height: 100vh;
+        box-sizing: border-box;
+        margin-top: 100px;
+        
+        &__resume__header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        &__header {
+            margin-bottom: 30px;
+            
+            h1 {
+                color: var(--selected-theme-main-color);
+                font-size: 2.5rem;
+                font-weight: 700;
+                margin-bottom: 15px;
+                text-transform: uppercase;
+                text-align: left;
+            }
+
+            .contact-info {
+                margin-bottom: 20px;
+
+                p {
+                    color: var(--selected-theme-sub-text-color);
+                    margin: 5px 0;
+                    font-size: 1rem;
+                    text-align: left;
+
+                    a {
+                        color: var(--selected-theme-main-color);
+                        text-decoration: none;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+
+                .clearance {
+                    color: var(--selected-theme-main-color);
+                    font-weight: 600;
+                }
+            }
+
+            .summary {
+                p {
+                    color: var(--selected-theme-sub-text-color);
+                    font-size: 1rem;
+                    line-height: 1.6;
+                    max-width: 800px;
+                    margin: 0;
+                    text-align: left;
+                }
+            }
+
+        }
+
+        &__body {
+            .experience, .education, .certifications, .projects {
+                margin-bottom: 40px;
+
+                h2 {
+                    color: var(--selected-theme-main-color);
+                    font-size: 1.8rem;
+                    margin-bottom: 20px;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    svg {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+
+            .experience-item {
+                margin-bottom: 25px;
+                padding: 20px;
+                background: var(--selected-theme-dark-color);
+                border-radius: 8px;
+                transition: transform 0.3s ease;
+
+                &:hover {
+                    transform: translateX(10px);
+                }
+
+                .title-row {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 10px;
+
+                    h3 {
+                        color: var(--selected-theme-sub-text-color);
+                        font-size: 1.3rem;
+                        font-weight: 600;
+                    }
+
+                    .period {
+                        color: var(--selected-theme-main-color);
+                        font-size: 0.9rem;
+                    }
+                }
+
+                h4 {
+                    color: var(--selected-theme-sub-text-color);
+                    font-size: 1rem;
+                    margin-bottom: 15px;
+                    font-weight: 500;
+                }
+
+                ul {
+                    list-style-type: disc;
+                    padding-left: 20px;
+
+                    li {
+                        color: var(--selected-theme-sub-text-color);
+                        margin-bottom: 8px;
+                        font-size: 0.95rem;
+                        line-height: 1.4;
+                    }
+                }
+            }
+
+            .education-item {
+                background: var(--selected-theme-dark-color);
+                padding: 20px;
+                border-radius: 8px;
+
+                h3 {
+                    color: var(--selected-theme-sub-text-color);
+                    font-size: 1.3rem;
+                    margin-bottom: 10px;
+                }
+
+                h4 {
+                    color: var(--selected-theme-main-color);
+                    font-size: 1rem;
+                    margin-bottom: 15px;
+                }
+
+                .coursework {
+                    h4 {
+                        color: var(--selected-theme-sub-text-color);
+                        margin-bottom: 5px;
+                    }
+
+                    p {
+                        color: var(--selected-theme-sub-text-color);
+                        font-size: 0.95rem;
+                        line-height: 1.6;
+                    }
+                }
+            }
+
+            .certifications {
+                ul {
+                    list-style: none;
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                    gap: 15px;
+
+                    li {
+                        background: var(--selected-theme-dark-color);
+                        padding: 15px;
+                        border-radius: 8px;
+                        color: var(--selected-theme-sub-text-color);
+                        font-size: 1rem;
+                        display: flex;
+                        align-items: center;
+                        transition: transform 0.3s ease;
+
+                        &:hover {
+                            transform: translateY(-5px);
+                        }
+                    }
+                }
+            }
+
+            .projects-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 20px;
+
+                .project-item {
+                    background: var(--selected-theme-dark-color);
+                    padding: 20px;
+                    border-radius: 8px;
+                    transition: transform 0.3s ease;
+
+                    &:hover {
+                        transform: translateY(-5px);
+                    }
+
+                    h3 {
+                        color: var(--selected-theme-sub-text-color);
+                        font-size: 1.2rem;
+                        margin-bottom: 10px;
+                    }
+
+                    p {
+                        color: var(--selected-theme-sub-text-color);
+                        font-size: 0.95rem;
+                        margin-bottom: 15px;
+                    }
+
+                    a {
+                        color: var(--selected-theme-main-color);
+                        text-decoration: none;
+                        font-size: 0.9rem;
+                        display: inline-block;
+                        margin-bottom: 10px;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+
+                    .tech-tag {
+                        background: var(--selected-theme-main-color);
+                        color: var(--selected-theme-background-color);
+                        padding: 4px 8px;
+                        border-radius: 4px;
+                        font-size: 0.8rem;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .resume {
+        &__content {
+            padding: 10px;
+
+            &__header {
+                h1 {
+                    font-size: 2rem;
+                }
+            }
+
+            &__body {
+                .experience-item {
+                    .title-row {
+                        flex-direction: column;
+                        align-items: flex-start;
+                        gap: 5px;
+                    }
+                }
+
+                .projects-grid {
+                    grid-template-columns: 1fr;
+                }
+
+                .certifications {
+                    ul {
+                        grid-template-columns: 1fr;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
