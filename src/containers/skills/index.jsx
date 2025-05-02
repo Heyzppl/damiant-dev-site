@@ -14,15 +14,15 @@ const skillsData = [
             },
             {
                 skillName: "CSS",
-                percentage: "85"
+                percentage: "70"
             },
             {
                 skillName: "JAVASCRIPT",
-                percentage: "90"
+                percentage: "60"
             },
             {
                 skillName: "REACT",
-                percentage: "85"
+                percentage: "60"
             }
         ]
     },
@@ -30,16 +30,12 @@ const skillsData = [
         label: "BACK END",
         skills: [
             {
-                skillName: "NODE.JS",
+                skillName: "NODE",
                 percentage: "80"
-            },
+            },  
             {
                 skillName: "PYTHON",
                 percentage: "85"
-            },
-            {
-                skillName: "JAVA",
-                percentage: "75"
             }
         ]
     },
@@ -47,16 +43,12 @@ const skillsData = [
         label: "DATABASES",
         skills: [
             {
-                skillName: "MONGODB",
+                skillName: "SUPABASE",
                 percentage: "85"
             },
             {
                 skillName: "MYSQL",
                 percentage: "75"
-            },
-            {
-                skillName: "POSTGRESQL",
-                percentage: "80"
             }
         ]
     },
@@ -69,11 +61,40 @@ const skillsData = [
             },
             {
                 skillName: "DOCKER",
-                percentage: "70"
+                percentage: "50"
             },
             {
                 skillName: "AWS",
+                percentage: "65"
+            },
+            {
+                skillName: "C++",
+                percentage: "70"
+            }
+        ]
+    },
+    {
+        label: "IT INFRASTRUCTURE",
+        skills: [
+            {
+                skillName: "ACTIVE DIRECTORY",
+                percentage: "85"
+            },
+            {
+                skillName: "VMWARE",
+                percentage: "80"
+            },
+            {
+                skillName: "CISCO UNIFIED CALL MANAGER",
                 percentage: "75"
+            },
+            {
+                skillName: "NETWORKING (SWITCHES/ROUTERS)",
+                percentage: "85"
+            },
+            {
+                skillName: "WIDE AREA NETWORKS",
+                percentage: "80"
             }
         ]
     }
@@ -111,6 +132,7 @@ const Skills = () => {
                                                 className="skills__skill-item-progress"
                                                 style={{ width: `${skillItem.percentage}%` }}
                                             />
+                                            <span className="skills__skill-item-percentage">{skillItem.percentage}%</span>
                                         </div>
                                     </div>
                                 ))}
