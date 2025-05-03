@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import './styles.scss';
 
 const Portfolio = () => {
     return(
-        <div>
-            Portfolio Page
+        <div className='portfolio-top'>
+            Portfolio Page / coming soon / work in progress
         </div>
     )
 }
